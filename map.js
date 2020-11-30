@@ -1,12 +1,14 @@
 
+
 function map(arr, func) {
-    // skapa en ny tom array av samma längd som arr
-
-    // för varje element i arr
-    //      newArray[j] = func(arr[j])
-
-    // returnera den nya arrayen
+    const newArray = new Array(arr.length)
+    for (let i = 0; i < newArray.length; i++) {
+        newArray[i] = func(arr[i])
+    }return newArray // returnera den nya arrayen
 }
+
+// för varje element i arr
+// newArray[j] = func(arr[j])
 
 // Test 1
 console.log('\nTEST 1')
@@ -24,3 +26,8 @@ console.log(stringArray)    // ['boll', 'häst', 'flygplan']
 
 // Test 3 - GÖR ETT EGET TEST HÄR
 console.log('\nTEST 3')
+const arrArr = ["arr", 54, "mateys.", 12, "of us will die", 2, "day. Good luck anyways.. arrrrrr"]
+const newArrArr = map(arrArr, x => x * 2 )
+console.log(arrArr)
+console.log(newArrArr) 
+// den returnar en del nan men tänker att pirater säkert åkte till indian ibland och käkade bara...
